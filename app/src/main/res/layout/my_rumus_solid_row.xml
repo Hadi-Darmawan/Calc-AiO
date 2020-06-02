@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/myImageRumusSolid"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/myTextRumusSolid1"
+            android:layout_width="265dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Tittle"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/myImageRumusSolid"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/myTextRumusSolid2"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="Description 1"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="@+id/myTextRumusSolid1"
+            app:layout_constraintTop_toBottomOf="@+id/myTextRumusSolid1" />
+
+        <TextView
+            android:id="@+id/myTextRumusSolid3"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Description 2"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="@+id/myTextRumusSolid2"
+            app:layout_constraintTop_toBottomOf="@+id/myTextRumusSolid2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.BlockActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarBlock"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorSlidingTab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/colorTitleApp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Perhitungan Balok"
+            android:textColor="@color/colorBlack"
+            android:textSize="27dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/blockView"
+        android:layout_width="match_parent"
+        android:layout_height="255dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarBlock" />
+
+    <EditText
+        android:id="@+id/inputBlock1"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="3dp"
+        android:background="@color/colorWhiter"
+        android:ems="10"
+        android:hint="Masukan Panjang"
+        android:inputType="number"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/blockView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/blockView"
+        app:layout_constraintTop_toTopOf="@+id/blockView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/inputBlock2"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="3dp"
+        android:background="@color/colorWhiter"
+        android:ems="10"
+        android:hint="Masukan Lebar"
+        android:inputType="number"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/blockView"
+        app:layout_constraintTop_toBottomOf="@+id/inputBlock1" />
+
+    <EditText
+        android:id="@+id/inputBlock3"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="3dp"
+        android:background="@color/colorWhiter"
+        android:ems="10"
+        android:hint="Masukan Tinggi"
+        android:inputType="number"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/blockView"
+        app:layout_constraintTop_toBottomOf="@+id/inputBlock2" />
+
+    <TextView
+        android:id="@+id/viewBlock"
+        android:textSize="27dp"
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="3dp"
+        android:background="@color/colorWhiter"
+        android:gravity="center|end"
+        android:hint="Result"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/blockView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputBlock3" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="35dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blockView">
+
+        <Button
+            android:id="@+id/btn_lpBlock"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_background"
+            android:text="Luas Permukaan"
+            android:textColor="@color/colorBlack"
+            android:textSize="18dp" />
+        <Button
+            android:id="@+id/btn_vBlock"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_background"
+            android:text="Volume"
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

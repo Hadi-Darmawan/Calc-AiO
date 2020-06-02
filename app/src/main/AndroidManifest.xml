@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.calcio">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.MenurunkanActivity"></activity>
+        <activity android:name=".activity.MenaikanActivity" />
+        <activity android:name=".activity.RumusSolidActivity" />
+        <activity android:name=".activity.RumusPlaneActivity" />
+        <activity android:name=".activity.CylinderActivity" />
+        <activity android:name=".activity.BlockActivity" />
+        <activity android:name=".activity.CubeActivity" />
+        <activity android:name=".activity.RectangularActivity" />
+        <activity android:name=".activity.SquareActivity" />
+        <activity android:name=".activity.TriangleActivity" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

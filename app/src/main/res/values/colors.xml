@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorSlidingTab">#46BD90F1</color>
+    <color name="colorTitleApp">#FAFFFFFF</color>
+    <color name="colorPrimary">#5E10B6</color>
+    <color name="colorSliding">#4B128C</color>
+    <color name="colorPrimaryDark">#4B128C</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorWhite">#37FFFFFF</color>
+    <color name="colorWhiter">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorButton">#46A370DF</color>
+</resources>
