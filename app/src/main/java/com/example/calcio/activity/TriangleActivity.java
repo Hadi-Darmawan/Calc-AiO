@@ -35,10 +35,14 @@ public class TriangleActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                alas = Integer.parseInt( inputTriangle1.getText().toString() );
-                tinggi = Integer.parseInt( inputTriangle2.getText().toString() );
-                result = alas*tinggi;
-                viewTriangle.setText( "Luas Segitiga : " + result );
+                if (inputTriangle1.getText().toString().equals( "" ) || inputTriangle2.getText().toString().equals( "" )){
+                    viewTriangle.setText( "Input tidak lengkap" );
+                }else {
+                    alas = Integer.parseInt( inputTriangle1.getText().toString() );
+                    tinggi = Integer.parseInt( inputTriangle2.getText().toString() );
+                    result = alas * tinggi;
+                    viewTriangle.setText( "Luas Segitiga : " + result );
+                }
             }
         } );
 
@@ -46,11 +50,16 @@ public class TriangleActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                s1 = Integer.parseInt( inputTriangle1.getText().toString() );
-                s2 = Integer.parseInt( inputTriangle2.getText().toString() );
-                s3 = Integer.parseInt( inputTriangle3.getText().toString() );
-                result = s1 + s2 + s3;
-                viewTriangle.setText( "Keliling Segitiga : " + result );
+                if (inputTriangle1.getText().toString().equals( "" ) || inputTriangle2.getText().toString().equals( "" )
+                        || inputTriangle3.getText().toString().equals( "" )){
+                    viewTriangle.setText( "Input tidak lengkap" );
+                }else {
+                    s1 = Integer.parseInt( inputTriangle1.getText().toString() );
+                    s2 = Integer.parseInt( inputTriangle2.getText().toString() );
+                    s3 = Integer.parseInt( inputTriangle3.getText().toString() );
+                    result = s1 + s2 + s3;
+                    viewTriangle.setText( "Keliling Segitiga : " + result );
+                }
             }
         } );
 

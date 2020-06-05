@@ -35,10 +35,14 @@ public class CylinderActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                r = Integer.parseInt( inputCylinder1.getText().toString() );
-                tinggi = Integer.parseInt( inputCylinder2.getText().toString() );
-                result = (2 * 3.14 * (r * r) + (2 * 3.14 * r));
-                viewCylinder.setText( "Luas Permukaan Tabung : " + result );
+                if (inputCylinder1.getText().toString().equals( "" ) || inputCylinder2.getText().toString().equals( "" )){
+                    viewCylinder.setText( "Input tidak lengkap" );
+                }else {
+                    r = Integer.parseInt( inputCylinder1.getText().toString() );
+                    tinggi = Integer.parseInt( inputCylinder2.getText().toString() );
+                    result = (2 * 3.14 * (r * r) + (2 * 3.14 * r * tinggi));
+                    viewCylinder.setText( "Luas Permukaan Tabung : " + result );
+                }
             }
         } );
 
@@ -46,10 +50,14 @@ public class CylinderActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                r = Integer.parseInt( inputCylinder1.getText().toString() );
-                tinggi = Integer.parseInt( inputCylinder2.getText().toString() );
-                result = 3.14 * (r * r) * tinggi;
-                viewCylinder.setText( "Volume Tabung : " + result );
+                if (inputCylinder1.getText().toString().equals( "" ) || inputCylinder2.getText().toString().equals( "" )){
+                    viewCylinder.setText( "Input tidak lengkap" );
+                }else {
+                    r = Integer.parseInt( inputCylinder1.getText().toString() );
+                    tinggi = Integer.parseInt( inputCylinder2.getText().toString() );
+                    result = 3.14 * (r * r) * tinggi;
+                    viewCylinder.setText( "Volume Tabung : " + result );
+                }
             }
         } );
 

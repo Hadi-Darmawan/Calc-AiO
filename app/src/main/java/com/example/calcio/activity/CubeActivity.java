@@ -32,9 +32,13 @@ public class CubeActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                sisi= Integer.parseInt( inputCube1.getText().toString() );
-                result = 6 * (sisi * sisi);
-                viewCube.setText( "Luas Permukaan Kubus : " + result );
+                if (inputCube1.getText().toString().equals( "" )){
+                    viewCube.setText( "Input tidak lengkap" );
+                }else {
+                    sisi = Integer.parseInt( inputCube1.getText().toString() );
+                    result = 6 * (sisi * sisi);
+                    viewCube.setText( "Luas Permukaan Kubus : " + result );
+                }
             }
         } );
 
@@ -42,9 +46,13 @@ public class CubeActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                sisi = Integer.parseInt( inputCube1.getText().toString() );
-                result = sisi * sisi * sisi;
-                viewCube.setText( "Volume Kubus : " + result );
+                if (inputCube1.getText().toString().equals( "" )){
+                    viewCube.setText( "Input tidak lengkap" );
+                }else {
+                    sisi = Integer.parseInt( inputCube1.getText().toString() );
+                    result = sisi * sisi * sisi;
+                    viewCube.setText( "Volume Kubus : " + result );
+                }
             }
         } );
 

@@ -32,9 +32,13 @@ public class SquareActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                sisi = Integer.parseInt( inputSquare1.getText().toString() );
-                result = sisi*sisi;
-                viewSquare.setText( "Luas Persegi : " + result );
+                if (inputSquare1.getText().toString().equals( "" )){
+                    viewSquare.setText( "Input tidak lengkap" );
+                }else {
+                    sisi = Integer.parseInt( inputSquare1.getText().toString() );
+                    result = sisi * sisi;
+                    viewSquare.setText( "Luas Persegi : " + result );
+                }
             }
         } );
 
@@ -42,9 +46,13 @@ public class SquareActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                sisi = Integer.parseInt( inputSquare1.getText().toString() );
-                result = sisi * 4;
-                viewSquare.setText( "Keliling Persegi : " + result );
+                if (inputSquare1.getText().toString().equals( "" )){
+                    viewSquare.setText( "Input tidak lengkap" );
+                }else {
+                    sisi = Integer.parseInt( inputSquare1.getText().toString() );
+                    result = sisi * 4;
+                    viewSquare.setText( "Keliling Persegi : " + result );
+                }
             }
         } );
 

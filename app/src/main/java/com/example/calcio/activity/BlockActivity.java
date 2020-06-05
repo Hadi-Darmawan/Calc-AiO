@@ -34,11 +34,16 @@ public class BlockActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                panjang = Integer.parseInt( inputBlock1.getText().toString() );
-                tinggi = Integer.parseInt( inputBlock3.getText().toString() );
-                lebar = Integer.parseInt( inputBlock2.getText().toString() );
-                result = (2 * (panjang * lebar)) + (2 * (panjang * tinggi)) + (2 * (lebar * tinggi));
-                viewBlock.setText( "Luas Permukaan Balok : " + result );
+                if (inputBlock1.getText().toString().equals( "" ) || inputBlock2.getText().toString().equals( "" )
+                        || inputBlock3.getText().toString().equals( "" )){
+                    viewBlock.setText( "Input tidak lengkap" );
+                }else{
+                    panjang = Integer.parseInt( inputBlock1.getText().toString() );
+                    tinggi = Integer.parseInt( inputBlock3.getText().toString() );
+                    lebar = Integer.parseInt( inputBlock2.getText().toString() );
+                    result = (2 * (panjang * lebar)) + (2 * (panjang * tinggi)) + (2 * (lebar * tinggi));
+                    viewBlock.setText( "Luas Permukaan Balok : " + result );
+                }
             }
         } );
 
@@ -46,11 +51,16 @@ public class BlockActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                panjang = Integer.parseInt( inputBlock1.getText().toString() );
-                lebar = Integer.parseInt( inputBlock2.getText().toString() );
-                tinggi = Integer.parseInt( inputBlock2.getText().toString() );
-                result = panjang * lebar * tinggi;
-                viewBlock.setText( "Volume Balook : " + result );
+                if (inputBlock1.getText().toString().equals( "" ) || inputBlock2.getText().toString().equals( "" )
+                        || inputBlock3.getText().toString().equals( "" )){
+                    viewBlock.setText( "Input tidak lengkap" );
+                }else {
+                    panjang = Integer.parseInt( inputBlock1.getText().toString() );
+                    lebar = Integer.parseInt( inputBlock2.getText().toString() );
+                    tinggi = Integer.parseInt( inputBlock2.getText().toString() );
+                    result = panjang * lebar * tinggi;
+                    viewBlock.setText( "Volume Balook : " + result );
+                }
             }
         } );
 

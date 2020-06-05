@@ -33,10 +33,14 @@ public class RectangularActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                panjang = Integer.parseInt( inputRectangular1.getText().toString() );
-                lebar = Integer.parseInt( inputRectangular2.getText().toString() );
-                result = panjang * lebar;
-                viewRectangular.setText( "Luas Persegi Panjang : " + result );
+                if (inputRectangular1.getText().toString().equals( "" ) || inputRectangular2.getText().toString().equals( "" )){
+                    viewRectangular.setText( "Input tidak lengkap" );
+                }else {
+                    panjang = Integer.parseInt( inputRectangular1.getText().toString() );
+                    lebar = Integer.parseInt( inputRectangular2.getText().toString() );
+                    result = panjang * lebar;
+                    viewRectangular.setText( "Luas Persegi Panjang : " + result );
+                }
             }
         } );
 
@@ -44,10 +48,14 @@ public class RectangularActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                panjang = Integer.parseInt( inputRectangular1.getText().toString() );
-                lebar = Integer.parseInt( inputRectangular2.getText().toString() );
-                result = 2*(panjang + lebar);
-                viewRectangular.setText( "Keliling Persegi Panjang : " + result );
+                if (inputRectangular1.getText().toString().equals( "" ) || inputRectangular2.getText().toString().equals( "" )){
+                    viewRectangular.setText( "Input tidak lengkap" );
+                }else {
+                    panjang = Integer.parseInt( inputRectangular1.getText().toString() );
+                    lebar = Integer.parseInt( inputRectangular2.getText().toString() );
+                    result = 2 * (panjang + lebar);
+                    viewRectangular.setText( "Keliling Persegi Panjang : " + result );
+                }
             }
         } );
 
