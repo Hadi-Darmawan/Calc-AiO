@@ -45,7 +45,7 @@
         android:layout_marginEnd="3dp"
         android:background="@color/colorWhiter"
         android:ems="10"
-        android:hint="Sisi"
+        android:hint="Masukan Sisi Persegi"
         android:inputType="number"
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/squareView"
