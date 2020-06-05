@@ -59,7 +59,7 @@ public class BlockActivity extends AppCompatActivity {
                     lebar = Integer.parseInt( inputBlock2.getText().toString() );
                     tinggi = Integer.parseInt( inputBlock2.getText().toString() );
                     result = panjang * lebar * tinggi;
-                    viewBlock.setText( "Volume Balook : " + result );
+                    viewBlock.setText( "Volume Balok : " + result );
                 }
             }
         } );
