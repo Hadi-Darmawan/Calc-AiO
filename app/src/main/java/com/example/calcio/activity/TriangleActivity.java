@@ -40,7 +40,7 @@ public class TriangleActivity extends AppCompatActivity {
                 }else {
                     alas = Integer.parseInt( inputTriangle1.getText().toString() );
                     tinggi = Integer.parseInt( inputTriangle2.getText().toString() );
-                    result = alas * tinggi;
+                    result = alas * tinggi * 1/2;
                     viewTriangle.setText( "Luas Segitiga : " + result );
                 }
             }
